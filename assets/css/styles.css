@@ -1,0 +1,194 @@
+/* Estilos básicos da Landing Page Scrum */
+
+:root {
+    --azul: #2563eb;
+    --azul-escuro: #1e3a8a;
+    --fundo: #f1f5f9;
+    --branco: #ffffff;
+    --texto: #334155;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.site-header {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+    color: var(--branco);
+    text-align: center;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+.site-header p {
+    margin-bottom: 0;
+}
+
+/* Conteúdo principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: var(--azul-escuro);
+}
+
+/* Seção sobre o Scrum */
+#scrum-framework {
+    padding: 25px;
+    border-radius: 12px;
+    background: var(--branco);
+    box-shadow: 0 3px 10px #0002;
+}
+
+/* Cards dos papéis do Scrum */
+.roles-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.roles-grid article {
+    padding: 20px;
+    border-top: 4px solid var(--azul);
+    border-radius: 8px;
+    background: var(--branco);
+    box-shadow: 0 3px 10px #0002;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.roles-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px #0003;
+}
+
+.roles-grid h3 {
+    margin-top: 0;
+    color: var(--azul);
+}
+
+/* Eventos do Scrum */
+.events-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.events-timeline li {
+    padding: 15px;
+    border-left: 4px solid var(--azul);
+    background: var(--branco);
+}
+
+/* Lista de artefatos ou benefícios */
+.artifacts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.artifacts li {
+    padding: 12px;
+    border-radius: 6px;
+    background: var(--branco);
+}
+
+.artifacts li::before {
+    content: "✓ ";
+    color: green;
+    font-weight: bold;
+}
+
+/* Chamada para ação */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    border-radius: 12px;
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.cta-section h2 {
+    color: var(--branco);
+}
+
+.cta-section a,
+.cta-section button {
+    width: fit-content;
+    padding: 10px 18px;
+    border: 2px solid var(--branco);
+    border-radius: 20px;
+    background: var(--branco);
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta-section a:hover,
+.cta-section button:hover,
+.cta-section a:focus,
+.cta-section button:focus {
+    background: var(--azul-escuro);
+    color: var(--branco);
+}
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    background: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Tablet e computador */
+@media (min-width: 600px) {
+    .roles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artifacts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .roles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .artifacts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .cta-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
