@@ -1,11 +1,11 @@
 /* Estilos básicos da Landing Page Scrum */
 
 :root {
-    --azul: #2563eb;
-    --azul-escuro: #1e3a8a;
-    --fundo: #f1f5f9;
+    --azul: #7c3aed;
+    --azul-escuro: #4c1d95;
+    --fundo: #faf5ff;
     --branco: #ffffff;
-    --texto: #334155;
+    --texto: #312e81;
 }
 
 * {
@@ -54,10 +54,16 @@ h2 {
 
 /* Seção sobre o Scrum */
 #scrum-framework {
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
     background: var(--branco);
-    box-shadow: 0 3px 10px #0002;
+    border-left: 6px solid var(--azul);
+    box-shadow: 0 8px 24px #4c1d9530;
+}
+
+#scrum-framework h2 {
+    margin-top: 0;
+    font-size: 30px;
 }
 
 /* Cards dos papéis do Scrum */
@@ -101,7 +107,7 @@ h2 {
     background: var(--branco);
 }
 
-/* Lista de artefatos ou benefícios */
+/* Lista de benefícios */
 .artifacts {
     display: grid;
     grid-template-columns: 1fr;
