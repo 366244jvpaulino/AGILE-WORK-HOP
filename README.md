@@ -1,4 +1,4 @@
-# Agile WorkShop - Aula 01: Landing Page Scrum - Primeiro Commit
+# Agile WorkShop - Aula 01: Landing Page Scrum - Segundo Commit
 
 **Grupo:** Aluno 1 e Aluno 2  
 **Data da Sprint:** 10/10/2026  
